@@ -1,0 +1,6 @@
+.homeContainer {
+    display: flex;
+    background-color: red;
+    width: 100%;
+    justify-content: space-between;
+}
