@@ -41,7 +41,7 @@
     height: 400px;
     background-color: whitesmoke;
     border-radius: 10px;
-    box-shadow: 5px 5px 15px 4px #979797;
+    box-shadow: 5px 5px 15px 4px #bdbdbd;
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -49,7 +49,11 @@
 }
 
 .closeBtn {
-    color: gray;
+    color: #dadada;
     cursor: pointer;
     font-size: 30px;
+}
+
+.closeBtn:hover {
+    color: #e6e6e6;;
 }
