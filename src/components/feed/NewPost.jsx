@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import "./newPost.css";
 
 function NewPost() {
   return (
-    <div>NewPost</div>
-  )
+    <div className="newPostContainer">
+      <div>NewPost</div>
+    </div>
+  );
 }
 
-export default NewPost
+export default NewPost;

@@ -1,0 +1,7 @@
+.newPostContainer {
+    background-color: white;
+    box-shadow: 2px 2px 5px 2px lightgray;
+    border-radius: 10px;
+    width: 100%;
+    height: 15%;
+}

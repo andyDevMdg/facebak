@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import "./leftbar.css";
 
 function Leftbar() {
   return (
-    <div>Leftbar</div>
-  )
+    <div className="leftbarContainer">
+        <div>Leftbar</div>
+    </div>
+  );
 }
 
-export default Leftbar
+export default Leftbar;

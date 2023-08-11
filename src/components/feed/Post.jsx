@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import "./post.css";
 
 function Post() {
   return (
-    <div>Post</div>
-  )
+    <div className="postContainer">
+      <div>Post</div>
+    </div>
+  );
 }
 
-export default Post
+export default Post;
