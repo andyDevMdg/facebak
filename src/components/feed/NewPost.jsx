@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./newPost.css";
 import { Avatar, Stack } from "@mui/material";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 function NewPost() {
   const [userName, setUserName] = useState("Andy");
@@ -14,6 +16,9 @@ function NewPost() {
             <form>
               <input type="text" placeholder="What's up ?" />
             </form>
+            <FontAwesomeIcon icon={faCircleXmark} 
+            className="closeBtn"
+            onClick={() => setShowField(false)}/>
           </div>
         </div>
       )}

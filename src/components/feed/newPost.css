@@ -41,5 +41,15 @@
     height: 400px;
     background-color: whitesmoke;
     border-radius: 10px;
-    box-shadow: 4px 4px 8px 4px lightgray;
+    box-shadow: 5px 5px 15px 4px #979797;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+
+.closeBtn {
+    color: gray;
+    cursor: pointer;
+    font-size: 30px;
 }
