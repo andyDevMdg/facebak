@@ -1,8 +1,13 @@
 import React from 'react'
+import NewPost from './NewPost'
+import Post from './Post'
 
 function Feed() {
   return (
-    <div>Feed</div>
+    <div>
+      <NewPost/>
+      <Post/>
+    </div>
   )
 }
 
