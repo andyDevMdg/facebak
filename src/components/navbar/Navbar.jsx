@@ -4,8 +4,7 @@ import "./navbar.css";
 function Navbar() {
   return (
     <div>
-      <div className="navbarContainer">
-        Navbar</div>
+      <div className="navbarContainer">Navbar</div>
     </div>
   );
 }

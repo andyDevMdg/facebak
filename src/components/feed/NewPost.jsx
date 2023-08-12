@@ -16,9 +16,11 @@ function NewPost() {
             <form>
               <input type="text" placeholder="What's up ?" />
             </form>
-            <FontAwesomeIcon icon={faCircleXmark} 
-            className="closeBtn"
-            onClick={() => setShowField(false)}/>
+            <FontAwesomeIcon
+              icon={faCircleXmark}
+              className="closeBtn"
+              onClick={() => setShowField(false)}
+            />
           </div>
         </div>
       )}
