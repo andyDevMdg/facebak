@@ -1,7 +1,7 @@
-# Instakilogram - Social Media Application
+# Facebak - Social Media Application
 ## Project Description
 
-Instakilogram is a social media application that allows users to create and share content, as well as participate in social networking. This project aims to provide hands-on experience in building a full-stack web application using technologies like React, React Router, Fetch API, and Axios.
+Facebak is a social media application that allows users to create and share content, as well as participate in social networking. This project aims to provide hands-on experience in building a full-stack web application using technologies like React, React Router, Fetch API, and Axios.
 
 ## Installation
 
