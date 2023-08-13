@@ -47,7 +47,7 @@
   --text-color: #bcbac4;
   --input-color: #191627;
   --body-color: hsl(240, 28%, 12%);
-  --container-color: #211d35;
+  --container-color: #110f1b;
 
   /* Spacing variables */
   --mb-0-25: 0.25rem;
@@ -76,7 +76,7 @@
   --z-modal: 1000;
 
   /* This is the skin color of our application */
-  --skin-color: #010611;
+  --skin-color: #020a1a;
 }
 
 body {
