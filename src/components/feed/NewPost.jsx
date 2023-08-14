@@ -1,44 +1,52 @@
-import React, { useState } from "react";
-import "./newPost.css";
-import { Avatar, Stack } from "@mui/material";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+import * as React from "react";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import AccountCircle from "@mui/icons-material/AccountCircle";
+import { alpha, createTheme } from "@mui/material";
 
-function NewPost() {
-  const [userName, setUserName] = useState("Andy");
-  const [showField, setShowField] = useState(false);
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#6e57e0",
+    },
+    secondary: {
+      main: "#f50057",
+    },
+  },
+});
 
+export default function NewPost() {
   return (
-    <div className="newPostContainer">
-      {showField && (
-        <div className="newStatutFieldBg">
-          <div className="newStatutField">
-            <form>
-              <input type="text" placeholder="What's up ?" />
-            </form>
-            <FontAwesomeIcon
-              icon={faCircleXmark}
-              className="closeBtn"
-              onClick={() => setShowField(false)}
-            />
-          </div>
-        </div>
-      )}
-      <Stack
-        direction="row"
-        justifyContent="flex-start"
-        alignItems="center"
-        spacing={2}
-        sx={{ width: "100%" }}
+    <Box sx={{ "& > :not(style)": { m: 1 } }}>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          backgroundColor: alpha(theme.palette.common.white, 0.15),
+          padding: "2px",
+          borderRadius: "30px",
+          boxShadow: "0 8px 24px rgba(0, 0, 0, 0.3)",
+        }}
       >
-        <Avatar>A</Avatar>
-        <button
-          className="btnStatutField"
-          onClick={() => setShowField(!showField)}
-        >{`What's Up ${userName}`}</button>
-      </Stack>
-    </div>
+        <AccountCircle sx={{ fontSize: 40, color: "#FFF", mr: 1, my: 0.5 }} />
+        <TextField
+          id="input-with-sx"
+          label="What's happening"
+          variant="standard"
+          InputProps={{
+            sx: {
+              color: "#fff",
+              width: "42vw",
+              "&::placeholder": {
+                color: "#fff",
+              },
+              "&:focus": {
+                borderColor: theme.palette.primary.main,
+              },
+            },
+          }}
+        />
+      </Box>
+    </Box>
   );
 }
-
-export default NewPost;

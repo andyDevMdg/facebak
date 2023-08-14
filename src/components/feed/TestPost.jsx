@@ -13,12 +13,26 @@ import CommentIcon from "@mui/icons-material/Comment";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Skeleton from "@mui/material/Skeleton";
 import Box from "@mui/material/Box";
+import { alpha, createTheme } from "@mui/material";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#6e57e0",
+    },
+    secondary: {
+      main: "#f50057",
+    },
+  },
+});
 
 function Media(props) {
   const { loading = false } = props;
 
   return (
-    <Card sx={{ m: 2 }}>
+    <Card
+      sx={{ m: 2, backgroundColor: alpha(theme.palette.common.white, 0.15), color:"white" }}
+    >
       <CardHeader
         avatar={
           loading ? (
