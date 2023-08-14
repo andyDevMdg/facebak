@@ -1,10 +1,9 @@
 .navbarContainer {
   width: 100%;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  position: sticky;
-  top: 0;
+  display: flex !important;
+  align-items: center !important;
+  position: sticky !important;
+  top: 0 !important;
   z-index: var(--z-modal);
 }
 
@@ -13,10 +12,10 @@
 }
 
 .logo {
-  font-size: var(--h1-font-size);
-  margin-left: var(--mb-3);
-  font-weight: bold;
-  color: var(--first-color);
+  font-size: var(--h1-font-size) !important;
+  margin-left: var(--mb-3) !important;
+  font-weight: bold !important;
+  color: white !important;
 }
 
 .navbarCenter {

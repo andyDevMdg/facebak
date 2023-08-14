@@ -87,7 +87,7 @@ body {
   outline: none;
   text-decoration: none;
   list-style: none;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
   background-color: var(--skin-color);
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
