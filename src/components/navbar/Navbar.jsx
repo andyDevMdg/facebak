@@ -176,7 +176,7 @@ export default function Navbar() {
       sx={{
         flexGrow: 1,
         transition: "background-color 0.3s ease-in-out",
-        backgroundColor: scrolling ? "red" : "transparent",
+        backgroundColor: scrolling ? "#2e206d" : "transparent",
       }}
       className="navbarContainer"
     >
