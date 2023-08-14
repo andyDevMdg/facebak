@@ -24,7 +24,7 @@ const Search = styled("div")(({ theme }) => ({
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
   marginRight: theme.spacing(2),
-  marginLeft: 0,
+  marginLeft: 2,
   width: "100%",
   height: "40px",
   [theme.breakpoints.up("sm")]: {
@@ -47,12 +47,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: "inherit",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("md")]: {
-      width: "20ch",
+      width: "40ch",
     },
   },
 }));
@@ -157,10 +156,10 @@ export default function Navbar() {
 
   return (
     <Box sx={{ flexGrow: 1 }} className="navbarContainer">
-      <AppBar position="static">
+      <AppBar position="static" sx={{ background: "transparent", boxShadow: "none" }}>
         <Toolbar>
           <Typography
-            variant="h6"
+            variant="h1"
             noWrap
             component="div"
             sx={{ display: { xs: "none", sm: "block" } }}
@@ -178,7 +177,15 @@ export default function Navbar() {
             />
           </Search>
           <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ display: { xs: "none", sm: "flex" }, marginRight: 20 }}>
+            <Typography variant="body1" sx={{ marginRight: 5 }}>
+              Home
+            </Typography>
+            <Typography variant="body1" sx={{ marginRight: 5 }}>
+              Profile
+            </Typography>
+          </Box>
+          <Box sx={{ display: { xs: "none", md: "flex" }, marginRight: 10 }}>
             <IconButton
               size="large"
               aria-label="show 4 new mails"
