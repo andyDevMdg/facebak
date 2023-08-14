@@ -9,7 +9,7 @@ function Home() {
   return (
     <>
       <Navbar />
-      <div homeContainer>
+      <div className="homeContainer">
         <Leftbar />
         <Feed />
         <Rightbar />
