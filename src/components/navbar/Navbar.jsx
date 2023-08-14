@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState, useEffect } from "react";
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -51,7 +52,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("md")]: {
-      width: "40ch",
+      width: "30ch",
     },
   },
 }));
@@ -59,6 +60,22 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -155,8 +172,18 @@ export default function Navbar() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }} className="navbarContainer">
-      <AppBar position="static" sx={{ background: "transparent", boxShadow: "none" }}>
+    <Box
+      sx={{
+        flexGrow: 1,
+        transition: "background-color 0.3s ease-in-out",
+        backgroundColor: scrolling ? "red" : "transparent",
+      }}
+      className="navbarContainer"
+    >
+      <AppBar
+        position="static"
+        sx={{ background: "transparent", boxShadow: "none" }}
+      >
         <Toolbar>
           <Typography
             variant="h1"
@@ -178,10 +205,10 @@ export default function Navbar() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", sm: "flex" }, marginRight: 20 }}>
-            <Typography variant="body1" sx={{ marginRight: 5 }}>
+            <Typography variant="body1" sx={{ marginRight: 5, cursor: "pointer" }}>
               Home
             </Typography>
-            <Typography variant="body1" sx={{ marginRight: 5 }}>
+            <Typography variant="body1" sx={{ marginRight: 5, cursor: "pointer" }}>
               Profile
             </Typography>
           </Box>
