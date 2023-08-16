@@ -1,13 +1,6 @@
-import React from "react";
-import "./rightbar.css";
-
-function Rightbar() {
-  return (
-    <div className="rightbarContainer">
-      <div>Rightbar</div>
-    </div>
-  );
-}
+const Rightbar = () => {
+  return <h1>Rightbar</h1>;
+};
 
 export default Rightbar;
 
