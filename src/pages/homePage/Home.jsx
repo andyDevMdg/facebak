@@ -10,9 +10,9 @@ function Home() {
     <>
       <Navbar />
       <div className="homeContainer">
-        <Leftbar />
-        <Feed />
-        <Rightbar />
+        <Leftbar className="leftBar"/>
+        <Feed className="feed" />
+        <Rightbar className="rightBar" />
       </div>
     </>
   );
