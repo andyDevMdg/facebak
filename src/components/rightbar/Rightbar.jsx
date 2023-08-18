@@ -9,25 +9,33 @@ import "./rightbar.css";
 
 function Rightbar() {
   const Item = styled(Paper)(({ theme }) => ({
-    borderRadius: '10px',
+    borderRadius: "10px",
     boxShadow: "none",
     backgroundColor: "transparent",
-    ...theme.typography.body2,
     padding: theme.spacing(1),
     cursor: "pointer",
     textAlign: "center",
     color: "#F5EBFF",
     ":hover": { backgroundColor: "rgba(255,255,255,0.1)" },
-    minWidth: 400,
+    minWidth: 350,
   }));
 
-  const message = `User you followed or friends you added`;
+  const message = `User you followed`;
 
   return (
     <Box
       sx={{ flexGrow: 1, overflow: "hidden", px: 3 }}
       className="rightbarContainer"
     >
+      <Stack
+        justifyContent="center"
+        alignItems="flex-start"
+        ml="30%"
+        mb="3%"
+        color="white"
+      >
+        <Typography>Contacts</Typography>
+      </Stack>
       <Stack
         direction="column"
         justifyContent="flex-start"
@@ -43,7 +51,7 @@ function Rightbar() {
         >
           <Stack spacing={2} direction="row" alignItems="center">
             <Avatar>W</Avatar>
-            <Typography>{message}</Typography>
+            <Typography fontSize="14px">{message}</Typography>
           </Stack>
         </Item>
         <Item
@@ -54,12 +62,8 @@ function Rightbar() {
           }}
         >
           <Stack spacing={2} direction="row" alignItems="center">
-            <Stack>
-              <Avatar>W</Avatar>
-            </Stack>
-            <Stack sx={{ minWidth: 0 }}>
-              <Typography>{message}</Typography>
-            </Stack>
+            <Avatar>W</Avatar>
+            <Typography fontSize="14px">{message}</Typography>
           </Stack>
         </Item>
       </Stack>
