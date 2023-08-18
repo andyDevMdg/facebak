@@ -21,6 +21,7 @@ function Rightbar() {
   }));
 
   const message = `User you followed`;
+  const messageTwo = `User you may know`;
 
   return (
     <Box
@@ -41,6 +42,7 @@ function Rightbar() {
         justifyContent="flex-start"
         alignItems="flex-end"
         spacing={1}
+        mb="3%"
       >
         <Item
           sx={{
@@ -64,6 +66,49 @@ function Rightbar() {
           <Stack spacing={2} direction="row" alignItems="center">
             <Avatar>W</Avatar>
             <Typography fontSize="14px">{message}</Typography>
+          </Stack>
+        </Item>
+      </Stack>
+
+{/*Users Suggestions*/}
+
+      <Stack
+        justifyContent="center"
+        alignItems="flex-start"
+        ml="30%"
+        mb="3%"
+        color="white"
+      >
+        <Typography>Suggestions</Typography>
+      </Stack>
+      <Stack
+        direction="column"
+        justifyContent="flex-start"
+        alignItems="flex-end"
+        spacing={1}
+      >
+        <Item
+          sx={{
+            my: 1,
+            mx: "auto",
+            p: 1,
+          }}
+        >
+          <Stack spacing={2} direction="row" alignItems="center">
+            <Avatar>W</Avatar>
+            <Typography fontSize="14px">{messageTwo}</Typography>
+          </Stack>
+        </Item>
+        <Item
+          sx={{
+            my: 1,
+            mx: "auto",
+            p: 1,
+          }}
+        >
+          <Stack spacing={2} direction="row" alignItems="center">
+            <Avatar>W</Avatar>
+            <Typography fontSize="14px">{messageTwo}</Typography>
           </Stack>
         </Item>
       </Stack>
