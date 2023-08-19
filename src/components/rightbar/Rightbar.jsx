@@ -11,11 +11,11 @@ function Rightbar() {
   const Item = styled(Paper)(({theme}) => ({
     "borderRadius": "10px",
     "boxShadow": "none",
-    "backgroundColor": "transparent",
+    "backgroundColor": theme.palette.mode === "dark" ? "transparent" : "#fff",
     "padding": theme.spacing(1),
     "cursor": "pointer",
     "textAlign": "center",
-    "color": "#F5EBFF",
+    "color": theme.palette.text.secondary,
     ":hover": {backgroundColor: "rgba(255,255,255,0.1)"},
     "minWidth": 350,
   }));
@@ -25,7 +25,13 @@ function Rightbar() {
 
   return (
     <Box sx={{flexGrow: 1, overflow: "hidden", px: 3}} className="rightbarContainer">
-      <Stack justifyContent="center" alignItems="flex-start" ml="30%" mb="3%" color="white">
+      <Stack
+        justifyContent="center"
+        alignItems="flex-start"
+        ml="20%"
+        mb="3%"
+        color='theme.palette.mode === "dark" ? "secondary" : "#fff"'
+      >
         <Typography>Contacts</Typography>
       </Stack>
       <Stack
@@ -63,7 +69,12 @@ function Rightbar() {
 
       {/*Users Suggestions*/}
 
-      <Stack justifyContent="center" alignItems="flex-start" ml="30%" mb="3%" color="white">
+      <Stack 
+      justifyContent="center" 
+      alignItems="flex-start" 
+      ml="20%" 
+      mb="3%" 
+      color='theme.palette.mode === "dark" ? "secondary" : "#fff"'>
         <Typography>Suggestions</Typography>
       </Stack>
       <Stack direction="column" justifyContent="flex-start" alignItems="flex-end" spacing={1}>
