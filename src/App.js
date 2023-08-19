@@ -12,13 +12,11 @@ const theme = createTheme({
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path='/login' element={<Login/>}/>
-          <Route path='/Signup' element={<SignUp/>}/>
-      </Routes>
-    </ThemeProvider>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/Signup' element={<SignUp/>}/>
+    </Routes>
   );
 }
 
