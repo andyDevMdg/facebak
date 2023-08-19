@@ -1,41 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
-  /* The following line are my main color palette that I use for */
-  /* Palette vibrante */
-  --vibrant-primary-color: #ff5733;
-  --vibrant-second-color: #f5c469;
-  --vibrant-third-color: #00a6ed;
-  --vibrant-fourth-color: #5d5fef;
-  --vibrant-fifth-color: #ffb12b;
-
-  /* Palette Pastel */
-  --pastel-primary-color: #85c7f2;
-  --pastel-second-color: #ffd700;
-  --pastel-third-color: #ff9f9f;
-  --pastel-fourth-color: #a2d9ce;
-  --pastel-fifth-color: #ffb874;
-
-  /* Palette Monochrome */
-  --monochrome-primary-color: #333;
-  --monochrome-second-color: #666;
-  --monochrome-third-color: #999;
-  --monochrome-fourth-color: #ccc;
-  --monochrome-fifth-color: #fff;
-
-  /* Palette Terre */
-  --terre-primary-color: #e0cb18;
-  --terre-second-color: #a89f91;
-  --terre-third-color: #726f68;
-  --terre-fourth-color: #574e48;
-  --terre-fifth-color: #332f2c;
-
-  /* Palette energique */
-  --energique-primary-color: #ff6347;
-  --energique-second-color: #ffa500;
-  --energique-third-color: #ffd700;
-  --energique-fourth-color: #32cd32;
-  --energique-fifth-color: #1e90ff;
-
   /* Palette ocean (palette favorite) */
   --first-color: #6e57e0;
   --first-color-second: #100e1b;
@@ -78,18 +42,11 @@
   /* This is the skin color of our application */
   --skin-color: #020a1a;
 }
-
-body {
+html,
+body,
+#root,
+.app {
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
-  outline: none;
-  text-decoration: none;
-  list-style: none;
   font-family: "Poppins", sans-serif !important;
-  background-color: var(--skin-color);
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }

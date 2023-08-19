@@ -1,16 +1,5 @@
-import React from "react";
-import NewPost from "./NewPost";
-import Post from "./Post";
-import TestPost from "./TestPost";
-import "./feed.css";
-
-function Feed() {
-  return (
-    <div className="feedContainer">
-      <NewPost />
-      <TestPost />
-    </div>
-  );
-}
+const Feed = () => {
+  return <h1>Feed</h1>;
+};
 
 export default Feed;
