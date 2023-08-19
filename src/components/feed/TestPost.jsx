@@ -13,13 +13,32 @@ import CommentIcon from "@mui/icons-material/Comment";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Skeleton from "@mui/material/Skeleton";
 import Box from "@mui/material/Box";
+import { alpha, createTheme } from "@mui/material";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#6e57e0",
+    },
+    secondary: {
+      main: "#f50057",
+    },
+  },
+});
 
 function Media(props) {
   const { loading = false } = props;
 
   return (
-    <Card sx={{ m: 2 }}>
+    <Card
+      sx={{
+        m: 2,
+        backgroundColor: alpha(theme.palette.common.white, 0.15),
+        color: "white",
+      }}
+    >
       <CardHeader
+        sx={{ color: "white", fontWeight: "bold" }}
         avatar={
           loading ? (
             <Skeleton
@@ -38,7 +57,7 @@ function Media(props) {
         action={
           loading ? null : (
             <IconButton aria-label="settings">
-              <MoreVertIcon />
+              <MoreVertIcon sx={{ color: "white" }} />
             </IconButton>
           )
         }
@@ -83,7 +102,11 @@ function Media(props) {
             <Skeleton animation="wave" height={10} width="80%" />
           </>
         ) : (
-          <Typography variant="body2" color="text.secondary">
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{ color: "white" }}
+          >
             "Why First Minister of Scotland Nicola Sturgeon thinks GDP is the
             wrong measure of a country's success:"
           </Typography>
@@ -94,25 +117,37 @@ function Media(props) {
           <Box display="flex" justifyContent="space-around" width="100%">
             <Box display="flex" alignItems="center">
               <IconButton aria-label="add to favorites">
-                <FavoriteIcon />
+                <FavoriteIcon sx={{ color: "white" }} />
               </IconButton>
-              <Typography variant="body2" color="text.secondary">
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                sx={{ color: "white" }}
+              >
                 Like
               </Typography>
             </Box>
             <Box display="flex" alignItems="center">
               <IconButton aria-label="comment">
-                <CommentIcon />
+                <CommentIcon sx={{ color: "white" }} />
               </IconButton>
-              <Typography variant="body2" color="text.secondary">
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                sx={{ color: "white" }}
+              >
                 Comment
               </Typography>
             </Box>
             <Box display="flex" alignItems="center">
               <IconButton aria-label="share">
-                <ShareIcon />
+                <ShareIcon sx={{ color: "white" }} />
               </IconButton>
-              <Typography variant="body2" color="text.secondary">
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                sx={{ color: "white" }}
+              >
                 Share
               </Typography>
             </Box>

@@ -1,7 +1,6 @@
 .rightbarContainer {
-  background-color: white;
-  box-shadow: 2px 2px 5px 2px lightgray;
-  width: 25%;
   height: 100%;
-  border-radius: 10px;
+  position: sticky !important;
+  top: 64px !important;
+  margin-top: 20px !important; 
 }
