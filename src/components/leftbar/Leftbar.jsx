@@ -62,14 +62,6 @@ function Leftbar() {
             <img className="leftbarFriendImg" src={FriendImgTest} alt="" />
             <span className="leftbarFriendName">Fiantso Harena</span>
           </li>
-          <li className="leftbarFriend">
-            <img className="leftbarFriendImg" src={FriendImgTest} alt="" />
-            <span className="leftbarFriendName">Fiantso Harena</span>
-          </li>
-          <li className="leftbarFriend">
-            <img className="leftbarFriendImg" src={FriendImgTest} alt="" />
-            <span className="leftbarFriendName">Fiantso Harena</span>
-          </li>
         </ul>
       </div>
     </div>
