@@ -5,14 +5,13 @@ import Rightbar from "../../components/rightbar/Rightbar";
 import "./home.css";
 
 function Home() {
-
   return (
     <>
       <Navbar />
       <div className="homeContainer">
-        <Leftbar className="leftBar"/>
-        <Feed className="feed" />
-        <Rightbar className="rightBar" />
+        <Leftbar />
+        <Feed />
+        <Rightbar />
       </div>
     </>
   );
