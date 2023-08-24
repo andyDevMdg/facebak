@@ -1,4 +1,5 @@
 import {
+  ArrowDownwardRounded,
   Group,
   HelpOutline,
   RssFeed,
@@ -8,6 +9,7 @@ import {
 } from "@mui/icons-material";
 import MailIcon from "@mui/icons-material/Mail";
 import "./leftbar.css";
+import FriendImgTest from "./1.jpg";
 
 function Leftbar() {
   return (
@@ -41,6 +43,32 @@ function Leftbar() {
           <li className="leftbarListItem">
             <School className="leftbarIcon" />
             <span className="leftbarListItemText">Courses</span>
+          </li>
+        </ul>
+        <button className="leftbarButton">
+          Show more <ArrowDownwardRounded className="leftbarButtonIcon" />
+        </button>
+        <hr className="leftbarHr" />
+        <ul className="leftbarFriendList">
+          <li className="leftbarFriend">
+            <img className="leftbarFriendImg" src={FriendImgTest} alt="" />
+            <span className="leftbarFriendName">Fiantso Harena</span>
+          </li>
+          <li className="leftbarFriend">
+            <img className="leftbarFriendImg" src={FriendImgTest} alt="" />
+            <span className="leftbarFriendName">Fiantso Harena</span>
+          </li>
+          <li className="leftbarFriend">
+            <img className="leftbarFriendImg" src={FriendImgTest} alt="" />
+            <span className="leftbarFriendName">Fiantso Harena</span>
+          </li>
+          <li className="leftbarFriend">
+            <img className="leftbarFriendImg" src={FriendImgTest} alt="" />
+            <span className="leftbarFriendName">Fiantso Harena</span>
+          </li>
+          <li className="leftbarFriend">
+            <img className="leftbarFriendImg" src={FriendImgTest} alt="" />
+            <span className="leftbarFriendName">Fiantso Harena</span>
           </li>
         </ul>
       </div>
