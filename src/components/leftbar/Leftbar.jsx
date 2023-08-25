@@ -9,7 +9,6 @@ import {
 } from "@mui/icons-material";
 import MailIcon from "@mui/icons-material/Mail";
 import "./leftbar.css";
-import FriendImgTest from "./1.jpg";
 
 function Leftbar() {
   return (
@@ -51,16 +50,36 @@ function Leftbar() {
         <hr className="leftbarHr" />
         <ul className="leftbarFriendList">
           <li className="leftbarFriend">
-            <img className="leftbarFriendImg" src={FriendImgTest} alt="" />
+            <img
+              className="leftbarFriendImg"
+              src="../../assets/person/1.jpeg"
+              alt=""
+            />
+            <span className="leftbarFriendName">Tanjona Andriantsitohaina</span>
+          </li>
+          <li className="leftbarFriend">
+            <img
+              className="leftbarFriendImg"
+              src="../../assets/person/2.jpeg"
+              alt=""
+            />
             <span className="leftbarFriendName">Fiantso Harena</span>
           </li>
           <li className="leftbarFriend">
-            <img className="leftbarFriendImg" src={FriendImgTest} alt="" />
-            <span className="leftbarFriendName">Fiantso Harena</span>
+            <img
+              className="leftbarFriendImg"
+              src="../../assets/person/9.jpeg"
+              alt=""
+            />
+            <span className="leftbarFriendName">Tendry Axel</span>
           </li>
           <li className="leftbarFriend">
-            <img className="leftbarFriendImg" src={FriendImgTest} alt="" />
-            <span className="leftbarFriendName">Fiantso Harena</span>
+            <img
+              className="leftbarFriendImg"
+              src="../../assets/person/4.jpeg"
+              alt=""
+            />
+            <span className="leftbarFriendName">Tendry</span>
           </li>
         </ul>
       </div>
