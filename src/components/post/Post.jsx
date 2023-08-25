@@ -1,6 +1,4 @@
-import { CommentOutlined, HeartBrokenOutlined, MoreVert } from "@mui/icons-material";
-import UserImgTest from "./1.jpg";
-import PostImgTest from "./2.jpg";
+import { HeartBrokenOutlined, MoreVert } from "@mui/icons-material";
 import "./post.css";
 
 const Post = () => {
@@ -9,7 +7,7 @@ const Post = () => {
       <div className="postWrapper">
         <div className="postTop">
           <div className="postTopLeft">
-            <img src={UserImgTest} className="postProfileImg" alt="" />
+            <img src="../../assets/person/2.jpeg" className="postProfileImg" alt="" />
             <span className="postUsername">Fiantso Harena</span>
             <span className="postDate">5 days ago</span>
           </div>
@@ -19,11 +17,12 @@ const Post = () => {
         </div>
         <div className="postCenter">
           <span className="postText">Hello Stivebook ! This is my first post here✨️</span>
-          <img src={PostImgTest} className="postImg" alt="" />
+          <img src="../../assets/post/1.jpeg" className="postImg" alt="" />
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
-            <HeartBrokenOutlined className="likeIcon"/>
+            <img src="../../assets/like.png" className="likeIcon"/>
+            <img src="../../assets/heart.png" className="likeIcon"/>
             <span className="postLikeCounter">69 peoples like it</span>
           </div>
           <div className="postBottomRight">
