@@ -52,3 +52,27 @@
 .profileRightBottom {
   display: flex;
 }
+
+.profileNameEdit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.editProfilBtn {
+  font-size: 22px;
+  cursor: pointer;
+  padding: 4px 12px;
+  border-radius: 10px;
+  transition: background-color .2s;
+}
+
+.editProfilBtn:hover {
+  background-color: rgba(255, 255, 255, 0.116);
+}
+
+.editProfilBtn:active {
+  scale: 0.9;
+}

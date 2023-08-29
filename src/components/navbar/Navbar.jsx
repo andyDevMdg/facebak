@@ -16,6 +16,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import "./navbar.css";
+import { Route } from "react-router-dom";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -206,7 +207,6 @@ export default function Navbar() {
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", sm: "flex" }, marginRight: 20 }}>
             <Typography variant="body1" sx={{ marginRight: 5, cursor: "pointer" }}>
-              Home
             </Typography>
             <Typography variant="body1" sx={{ marginRight: 5, cursor: "pointer" }}>
               Profile
