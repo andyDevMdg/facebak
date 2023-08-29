@@ -1,0 +1,6 @@
+.feed {
+  flex: 5;
+  color: white;
+  height: 100vh;
+  overflow-y: scroll;
+}
