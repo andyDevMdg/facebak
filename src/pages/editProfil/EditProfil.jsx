@@ -1,15 +1,20 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {Box, Typography} from "@mui/material";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faXmark} from "@fortawesome/free-solid-svg-icons";
 import "./editProfil.css";
 
-function EditProfil({closeEdit}) {
+function EditProfil({ closeEdit, onSaveChanges, initialUsername, initialBio }) {
   const [editingUsername, setEditingUsername] = useState(false);
   const [editingBio, setEditingBio] = useState(false);
 
-  const [username, setUsername] = useState("Fiantso Harena");
-  const [bio, setBio] = useState("We are a Dreamer");
+  const [username, setUsername] = useState(initialUsername);
+  const [bio, setBio] = useState(initialBio);
+
+  useEffect(() => {
+    setUsername(initialUsername);
+    setBio(initialBio);
+  }, [initialUsername, initialBio]);
 
   const handleEditUsername = () => {
     setEditingUsername(true);
@@ -22,6 +27,11 @@ function EditProfil({closeEdit}) {
   const handleSaveChanges = () => {
     setEditingUsername(false);
     setEditingBio(false);
+
+    onSaveChanges({
+      updatedUsername: username,
+      updatedBio: bio,
+    });
   };
 
   return (

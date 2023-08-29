@@ -11,11 +11,25 @@ import {useState} from "react";
 
 function Profile() {
   const [openEdit, setOpenEdit] = useState(false);
+  const [username, setUsername] = useState("Fiansto Harena");
+  const [bio, setBio] = useState("We are Dreamers");
+
+  const handleEditSave = (updatedData) => {
+    if (updatedData) {
+      setUsername(updatedData.updatedUsername);
+      setBio(updatedData.updatedBio);
+    }
+  };
 
   return (
     <>
       <Navbar />
-      {openEdit && <EditProfil closeEdit={setOpenEdit} />}
+      {openEdit && <EditProfil 
+      closeEdit={setOpenEdit} 
+      onSaveChanges={handleEditSave} 
+      initialUsername={username}
+      initialBio={bio}
+      />}
       
       <div className="profile">
         <div className="profileRight">
@@ -26,7 +40,7 @@ function Profile() {
             </div>
             <div className="profileInfo">
               <div className="profileNameEdit">
-                <h4 className="profileInfoName">Fiantso Harena</h4>
+                <h4 className="profileInfoName">{username}</h4>
                 <FontAwesomeIcon
                   icon={faPenToSquare}
                   className="editProfilBtn"
@@ -35,7 +49,7 @@ function Profile() {
                   }}
                 />
               </div>
-              <span className="profileInfoDesc">We are a Dreamer</span>
+              <span className="profileInfoDesc">{bio}</span>
             </div>
           </div>
           <div className="profileRightBottom">
