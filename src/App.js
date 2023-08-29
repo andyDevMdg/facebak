@@ -1,33 +1,22 @@
-import Home from "./pages/home/Home";
-import Login from "./pages/login/Login";
-import Profile from "./pages/profile/Profile";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useMemo } from "react";
-import { useSelector } from "react-redux";
-import { CssBaseline, ThemeProvider } from "@mui/material";
-import { createTheme } from "@mui/material/styles";
-import { themeSettings } from "./theme";
+import Home from "./pages/homePage/Home";
+import { Route, Routes } from "react-router-dom";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Profile from "./pages/profilePage/Profile";
 
-const App = () => {
-  /* Obtient le mode du thème depuis le state Redux */
-  const mode = useSelector((state) => state.mode);
+const theme = createTheme({
+  typography: {
+    fontFamily: "Poppins, sans-serif",
+  },
+});
 
-  /* Crée un thème basé sur les paramètres du mode actuel */
-  const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
-  
+function App() {
   return (
-    <div className="app">
-      <BrowserRouter>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/profile/:userId" element={<Profile />} />
-          </Routes>
-        </ThemeProvider>
-      </BrowserRouter>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+    </ThemeProvider>
   );
 }
 
