@@ -5,25 +5,50 @@ const fetch = axios.create({
 });
 
 const getAllPosts = async () => {
-    return await fetch.get("/posts")
+    const token = localStorage.getItem("token");
+    return await fetch.get("/posts", {
+        headers: {
+            Authorization : `Bearer ${token}`
+        }
+    })
 }
 
 const getPostComment = async (postId) => {
-    return await fetch.get(`/posts/${postId}/comments`)
+    const token = localStorage.getItem("token");
+    return await fetch.get(`/posts/${postId}/comments`, {
+        headers: {
+            Authorization : `Bearer ${token}`
+        }
+    })
 }
 
 const getPostReaction = async (postId) => {
-    return await  fetch.get(`/posts/${postId}/reactions`)
+    const token = localStorage.getItem("token");
+    return await  fetch.get(`/posts/${postId}/reactions`, {
+        headers: {
+            Authorization : `Bearer ${token}`
+        }
+    })
 }
 
 const postReaction = async (postId, postData) => {
-    return await fetch.post(`/posts/${postId}/reactions`, postData) //postData ex : {type: 'LIKE', userId}
+    const token = localStorage.getItem("token");
+    return await fetch.post(`/posts/${postId}/reactions`, postData, {
+        headers: {
+            Authorization : `Bearer ${token}`
+        }
+    }) //postData ex : {type: 'LIKE', userId}
 }
 
-const postComment = async (postId,  comment, userId) => {
+const postComment = async (postId, comment, userId) => {
+    const token = localStorage.getItem("token");
     return await fetch.put(`/posts/${postId}/comments`, {
         content: comment,
         userId: userId
+    }, {
+        headers: {
+            Authorization : `Bearer ${token}`
+        }
     })
 }
 

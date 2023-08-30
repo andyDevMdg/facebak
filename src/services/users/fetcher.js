@@ -5,19 +5,39 @@ const fetch = axios.create({
 });
 
 const getAllUsers = async () => {
-    return await fetch.get("/users");
+    const token = localStorage.getItem("token");
+    return await fetch.get("/users", {
+        headers: {
+            Authorization : `Bearer ${token}`
+        }
+    })
 }
 
 const getUserById = async (id) => {
-    return await fetch.get(`/users/${id}`)
+    const token = localStorage.getItem("token");
+    return await fetch.get(`/users/${id}`, {
+        headers: {
+            Authorization : `Bearer ${token}`
+        }
+    })
 }
 
 const postUser = async (user) => {
-    return await fetch.post("/users", user);
+    const token = localStorage.getItem("token");
+    return await fetch.post("/users", user, {
+        headers: {
+            Authorization : `Bearer ${token}`
+        }
+    })
 }
 
 const postLogin = async (userInfo) => {
-    return await fetch.post("/users/login", userInfo)
+    const token = localStorage.getItem("token");
+    return await fetch.post("/users/login", userInfo, {
+        headers: {
+            Authorization : `Bearer ${token}`
+        }
+    })
 }
 export {
     getAllUsers,
