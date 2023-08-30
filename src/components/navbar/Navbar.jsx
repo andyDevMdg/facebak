@@ -16,7 +16,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import "./navbar.css";
-import { Route } from "react-router-dom";
+import {Route, Link, useNavigate} from "react-router-dom";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -88,12 +88,18 @@ export default function Navbar() {
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
   };
-
+  const navigation = useNavigate();
   const handleMenuClose = () => {
     setAnchorEl(null);
+    navigation("/profile");
     handleMobileMenuClose();
   };
-
+  const handleMenuCloseLogOut = () => {
+    setAnchorEl(null);
+    localStorage.clear();
+    navigation("/login");
+    handleMobileMenuClose();
+  };
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
@@ -116,7 +122,7 @@ export default function Navbar() {
       onClose={handleMenuClose}
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Log Out</MenuItem>
+      <MenuItem onClick={handleMenuCloseLogOut}>Log Out</MenuItem>
     </Menu>
   );
 
@@ -189,7 +195,8 @@ export default function Navbar() {
           <Typography
             variant="h1"
             noWrap
-            component="div"
+            component={Link}
+            to="/"
             sx={{ display: { xs: "none", sm: "block" } }}
             className="logo"
           >

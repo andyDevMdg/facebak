@@ -34,6 +34,10 @@ function LogIn() {
             return;
         }
 
+        // Store email and password in local storage
+        localStorage.setItem('email', email);
+        localStorage.setItem('password', password);
+
         // Form is valid, proceed with submission
         console.log('Form is valid');
     };

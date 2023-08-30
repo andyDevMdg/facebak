@@ -17,6 +17,7 @@
   margin-left: var(--mb-3) !important;
   font-weight: bold !important;
   color: var(--first-color) !important;
+  text-decoration: none !important;
 }
 
 .navbarCenter {
