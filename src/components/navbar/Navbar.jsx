@@ -215,9 +215,6 @@ export default function Navbar() {
           <Box sx={{ display: { xs: "none", sm: "flex" }, marginRight: 20 }}>
             <Typography variant="body1" sx={{ marginRight: 5, cursor: "pointer" }}>
             </Typography>
-            <Typography variant="body1" sx={{ marginRight: 5, cursor: "pointer" }}>
-              Profile
-            </Typography>
           </Box>
           <Box sx={{ display: { xs: "none", md: "flex" }, marginRight: 10 }}>
             <IconButton

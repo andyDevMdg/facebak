@@ -43,7 +43,7 @@
   --first-color-lighter: #c1b6fc;
   --title-color: #242329;
   --text-color-light: #a19fad;
-  --title-color: #f2f1f3;
+  /*--title-color: #f2f1f3;*/
   --text-color: #bcbac4;
   --input-color: #191627;
   --body-color: hsl(240, 28%, 12%);
@@ -92,6 +92,16 @@ body {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar{
+  background-color: transparent;
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: gray;
+  border-radius: 5em;
 }
 
 * {
